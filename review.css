@@ -1,0 +1,388 @@
+/* SIMPLE RESET */
+/* hide without display: none
+I used the "hide offscreen" method
+https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/ */
+
+/*http://www.no-margin-for-errors.com/blog/2009/12/10/css-tip-float-an-image-without-text-wrapping-under-it/*/
+
+* {
+    margin:0;
+    padding:0;
+    line-height:1;
+    box-sizing:border-box;
+    text-decoration:none;
+  }
+
+  body {
+    font-family:sans-serif;
+    margin: auto;
+  }
+
+  /*small screen*/
+  @media only screen and (max-width: 480px) {
+  nav{
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+#skip-nav{
+  background-color: #DCDCDC;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.sr-only{
+  text-align: left;
+  max-width: 100%;
+    display: inherit;
+}
+
+header.full-container{
+
+  background-image: linear-gradient(#DEF3FD, white);
+}
+.logo-text{
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.logo-image{
+  display: inline-block;
+  padding: .5em 0 2em 0;
+  width: 150px
+}
+
+/*hidden offscreen, should still be readable by screenreader*/
+.global-nav-list{
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.section-title-container{
+  text-align: center;
+  border-top: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  width: 150px;
+  margin: 0px auto 1em auto;
+  font-family: Times;
+  font-size: 27px;
+  color: #696969;
+
+}
+
+section.full-container .news-container:nth-child(even){
+  background-color: #DEF3FD;
+
+}
+
+.news-content{
+  margin-top: .5em;
+  padding: 0 0 20px 170px;
+  position: relative;
+}
+
+.news-thumb{
+left: 0;
+position: absolute;
+top: 0;
+}
+
+.news-container{
+  clear:both;
+  padding: .5em .5em .5em .5em;
+  margin-top: 2em;
+}
+
+.news-author{
+  color: #000080;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.news-date{
+  font-size: 12px;
+}
+
+.news-keywords{
+  background-color: orange;
+  padding: 5px 2px 2px 5px;
+  color: white;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 8px;
+}
+
+footer.full-container{
+  text-align: center;
+  padding: 1em .5em 1em .5em;
+  font-size: 12px
+}
+
+}
+
+/*medium screen*/
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+    nav{
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    nav.container{
+      padding-bottom: 6em;
+    }
+
+    header.full-container{
+      clear: both;
+
+      background-image: linear-gradient(#DEF3FD, white);
+    }
+
+  #skip-nav{
+    background-color: #DCDCDC;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  .sr-only{
+    text-align: left;
+    max-width: 100%;
+      display: inherit;
+  }
+
+  .logo-text{
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  .logo-image{
+    display: inline-block;
+    width: 250px;
+    padding-left: 4em;
+    padding-top: .5em;
+    float: left;
+
+  }
+
+nav ul li {
+  display:inline-block;
+      width:10%;
+      margin:0;
+      padding:0;
+}
+
+  .global-nav-list{
+color: brown;
+padding-top: 1em;
+  }
+
+  .global-nav-list a:visited{
+color: orange;
+  }
+
+  .global-nav-list a:hover{
+color: red;
+font-weight: bold;
+  }
+
+  .global-nav-list a:active{
+color: blue;
+font-weight: bold;
+  }
+
+  .section-title-container{
+    text-align: left;
+    border-top: 2px dotted #808080;
+    border-bottom: 2px dotted #808080;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-family: Times;
+    font-size: 40px;
+    color: #696969;
+
+  }
+
+section.full-container{
+  width:60%;
+  margin: 0 auto;
+
+  background-image: linear-gradient(white, #DEF3FD);
+}
+  .news-content{
+padding-top: .5em;
+height: 10em;
+  }
+
+  .news-thumb{
+    float: left;
+    padding-right: 1em;
+  }
+
+  .news-container{
+clear: both;
+padding-bottom: 2em;
+  }
+
+  .news-author{
+    color: #000080;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .news-date{
+    font-size: 12px;
+  }
+
+  .news-keywords{
+    background-color: orange;
+    padding: 5px 2px 2px 5px;
+    color: white;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 8px;
+  }
+
+  footer.full-container{
+    text-align: center;
+    padding: 1em .5em 1em .5em;
+    font-size: 12px
+  }
+
+}
+
+
+/*large screen*/
+@media only screen and (min-width: 768px) {
+
+    nav{
+      text-align: center;
+
+      margin-bottom: 2em;
+    }
+
+    nav.container{
+      padding-bottom: 6em;
+    }
+
+    header.full-container{
+      clear: both;
+      background-image: linear-gradient(#DEF3FD, white);
+    }
+
+  #skip-nav{
+    background-color: #DCDCDC;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  .sr-only{
+    text-align: left;
+    max-width: 100%;
+      display: inherit;
+  }
+
+  .logo-text{
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  .logo-image{
+    display: inline-block;
+    width: 250px;
+    padding-left: 4em;
+    padding-top: .5em;
+    float: left;
+
+  }
+
+nav ul li {
+  display:inline-block;
+      width:10%;
+      margin:0;
+      padding:0;
+}
+
+  .global-nav-list{
+color: brown;
+padding-top: 1em;
+  }
+
+  .global-nav-list a:visited{
+color: orange;
+  }
+
+  .global-nav-list a:hover{
+color: red;
+font-weight: bold;
+  }
+
+  .global-nav-list a:active{
+color: blue;
+font-weight: bold;
+  }
+
+  .section-title-container{
+    text-align: left;
+    border-top: 2px dotted #808080;
+    border-bottom: 2px dotted #808080;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-family: Times;
+    font-size: 40px;
+    color: #696969;
+
+  }
+
+section.full-container{
+  width:60%;
+  margin: 0 auto;
+  background-image: linear-gradient(white, #DEF3FD);
+}
+  .news-content{
+padding-top: .5em;
+height: 10em;
+  }
+
+  .news-thumb{
+    float: left;
+    padding-right: 1em;
+  }
+
+  .news-container{
+clear: both;
+padding-bottom: 2em;
+  }
+
+  .news-author{
+    color: #000080;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .news-date{
+    font-size: 12px;
+  }
+
+  .news-keywords{
+    background-color: orange;
+    padding: 5px 2px 2px 5px;
+    color: white;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 8px;
+  }
+
+  footer.full-container{
+    text-align: center;
+    padding: 1em .5em 1em .5em;
+    font-size: 12px
+  }
+
+}
